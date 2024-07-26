@@ -1,0 +1,197 @@
+//{
+//  "project_name": "WIP: Health Trend Tracker",
+//  "description": "WIP is a web application that allows users to upload medical data (lab reports, etc.) and track health trends over time. It provides insights on how diet, supplements, and lifestyle choices affect various health parameters.",
+//  "category": "health",
+//  "product_type": "app",
+//  "timeline": "4 weeks",
+//  "tasks": [
+//    {
+//      "week_no": 1,
+//      "goal": "Project Setup and User Interface Design",
+//      "task_no": 1,
+//      "task": "Define user personas and key features for the app."
+//    },
+//    {
+//      "week_no": 1,
+//      "goal": "Project Setup and User Interface Design",
+//      "task_no": 2,
+//      "task": "Research existing health tracking apps and data visualization tools."
+//    },
+//    {
+//      "week_no": 1,
+//      "goal": "Project Setup and User Interface Design",
+//      "task_no": 3,
+//      "task": "Create a basic wireframe for the app's UI and data input/output methods."
+//    },
+//    {
+//      "week_no": 1,
+//      "goal": "Project Setup and User Interface Design",
+//      "task_no": 4,
+//      "task": "Choose the technology stack for frontend and backend development."
+//    },
+//    {
+//      "week_no": 2,
+//      "goal": "Data Input and Storage",
+//      "task_no": 1,
+//      "task": "Develop the user authentication and profile creation system."
+//    },
+//    {
+//      "week_no": 2,
+//      "goal": "Data Input and Storage",
+//      "task_no": 2,
+//      "task": "Build the interface for uploading and storing medical data."
+//    },
+//    {
+//      "week_no": 2,
+//      "goal": "Data Input and Storage",
+//      "task_no": 3,
+//      "task": "Implement basic data visualization capabilities (charts, graphs)."
+//    },
+//    {
+//      "week_no": 2,
+//      "goal": "Data Input and Storage",
+//      "task_no": 4,
+//      "task": "Start building the trend analysis and insight generation algorithms."
+//    },
+//    {
+//      "week_no": 3,
+//      "goal": "Trend Analysis and Visualization",
+//      "task_no": 1,
+//      "task": "Enhance data visualization with interactive features and filtering options."
+//    },
+//    {
+//      "week_no": 3,
+//      "goal": "Trend Analysis and Visualization",
+//      "task_no": 2,
+//      "task": "Integrate AI-powered insights based on user data and research trends."
+//    },
+//    {
+//      "week_no": 3,
+//      "goal": "Trend Analysis and Visualization",
+//      "task_no": 3,
+//      "task": "Develop a personalized dashboard for users to track their health trends over time."
+//    },
+//    {
+//      "week_no": 3,
+//      "goal": "Trend Analysis and Visualization",
+//      "task_no": 4,
+//      "task": "Conduct user testing and gather feedback for improvement."
+//    },
+//    {
+//      "week_no": 4,
+//      "goal": "Testing and Deployment",
+//      "task_no": 1,
+//      "task": "Implement secure data storage and privacy features."
+//    },
+//    {
+//      "week_no": 4,
+//      "goal": "Testing and Deployment",
+//      "task_no": 2,
+//      "task": "Integrate with wearable devices and other health data sources."
+//    },
+//    {
+//      "week_no": 4,
+//      "goal": "Testing and Deployment",
+//      "task_no": 3,
+//      "task": "Develop a marketing strategy and plan for launch."
+//    },
+//    {
+//      "week_no": 4,
+//      "goal": "Testing and Deployment",
+//      "task_no": 4,
+//      "task": "Finalize the application and deploy it on a chosen platform."
+//    }
+//  ]
+//}
+
+{"timezone":"America/Los_Angeles","time_format":"24hr","available_blocks":{"2024-07-16":[{"start":"00:00","end":"00:00","is_available":true}],"2024-07-17":[{"start":"00:00","end":"00:00","is_available":true}],"2024-07-18":[{"start":"00:00","end":"13:30","is_available":true},{"start":"13:30","end":"18:00","is_available":false,"event_name":"<event_name>","event_type":"<event_type>"},{"start":"18:00","end":"00:00","is_available":true}],"2024-07-19":[{"start":"00:00","end":"00:00","is_available":true}]}}
+
+{
+  'Notes': {
+    'id': '%3A%3A%5Dt',
+    'type': 'relation',
+    'relation': [],
+    'has_more': False
+  },
+  'Description': {
+    'id': '%3D%60hR',
+    'type': 'rich_text',
+    'rich_text': []
+  },
+  'Date': {
+    'id': 'Dfqq',
+    'type': 'date',
+    'date': {
+      'start': '2023-12-02T15:00:00.000-08:00',
+      'end': '2023-12-02T15:20:00.000-08:00',
+      'time_zone': None
+    }
+  },
+  'Projects': {
+    'id': 'FG~F',
+    'type': 'relation',
+    'relation': [],
+    'has_more': False
+  },
+  'Day of Week': {
+    'id': 'R%5B%5E%5B',
+    'type': 'formula',
+    'formula': {
+      'type': 'string',
+      'string': 'Saturday'
+    }
+  },
+  'URL': {
+    'id': 'ZG%40D',
+    'type': 'url',
+    'url': None
+  },
+  'Hours spent': {
+    'id': '%60Bd%7C',
+    'type': 'formula',
+    'formula': {
+      'type': 'number',
+      'number': 0.333333333333
+    }
+  },
+  'Week from DB': {
+    'id': 'kSuD',
+    'type': 'relation',
+    'relation': [],
+    'has_more': False
+  },
+  ' Complete': {
+    'id': 'uF%3Ba',
+    'type': 'checkbox',
+    'checkbox': True
+  },
+  'Resources': {
+    'id': '~%3EvW',
+    'type': 'relation',
+    'relation': [],
+    'has_more': False
+  },
+  'Name': {
+    'id': 'title',
+    'type': 'title',
+    'title': [
+      {
+        'type': 'text',
+        'text': {
+          'content': 'book last cancun hotel',
+          'link': None
+        },
+        'annotations': {
+          'bold': False,
+          'italic': False,
+          'strikethrough': False,
+          'underline': False,
+          'code': False,
+          'color': 'default'
+        },
+        'plain_text': 'book last cancun hotel',
+        'href': None
+      }
+    ]
+  }
+}
