@@ -2,6 +2,7 @@ import os
 import json
 import logging
 from datetime import datetime
+import requests
 
 from typing import List, Any, Optional
 from zoneinfo import ZoneInfo, available_timezones
@@ -128,6 +129,24 @@ class WeeklyTasksDB(BaseModel):
     weekly_goal: str
     tasks: List[WeeklyTasks]
 
+
+class CalEventRequest(BaseModel):
+    access_token: str
+    calendar_id: str = 'primary'
+
+
+class EventTime(BaseModel):
+    dateTime: Optional[str]
+
+
+class CalEvent(BaseModel):
+    summary: str
+    start: EventTime
+    end: EventTime
+
+
+class CalEventDB(BaseModel):
+    events: List[CalEvent]
 
 @app.get("/")
 def index():
@@ -263,4 +282,35 @@ async def get_weekly_tasks(project_id: int, week_no: int):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+def get_calendar_events(access_token, calendar_id='primary'):
+    url = f'https://www.googleapis.com/calendar/v3/calendars/{calendar_id}/events'
+    headers = {
+        'Authorization': f'Bearer {access_token}'
+    }
+    response = requests.get(url, headers=headers)
 
+    if response.status_code == 200:
+        events = response.json().get('items', [])
+        return events
+    else:
+        raise Exception(f"Failed to fetch calendar events: {response.status_code} {response.text}")
+
+
+@app.get("/calevents", response_model=CalEventDB)
+async def fetch_events(access_token: str = Query(...), calendar_id: str = Query('primary')):
+    try:
+        events = get_calendar_events(access_token, calendar_id)
+        # Construct the result in the required format
+        constructed_result = {
+            "events": [
+                {
+                    "summary": event.get("summary", ""),
+                    "start": {"dateTime": event.get("start", {}).get("dateTime")},
+                    "end": {"dateTime": event.get("end", {}).get("dateTime")}
+                }
+                for event in events
+            ]
+        }
+        return CalEventDB(**constructed_result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

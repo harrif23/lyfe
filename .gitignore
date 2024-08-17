@@ -6,4 +6,6 @@ venv
 .DS_Store
 __pycache__/
 
-calendars/creds/
+calendars/
+
+
